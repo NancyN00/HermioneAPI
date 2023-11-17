@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-kapt")
-    id ("dagger.hilt.android.plugin")
+ //   id ("dagger.hilt.android.plugin")
 
 }
 
@@ -54,21 +54,24 @@ dependencies {
 
     //coroutines
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+
 
     //Retrofit
-    implementation ("com.google.code.gson:gson:2.9.0")
+    implementation ("com.google.code.gson:gson:2.10.1")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
     //Dagger - Hilt
-    implementation ("com.google.dagger:hilt-android:2.45")
-    kapt ("com.google.dagger:hilt-android-compiler:2.45")
-    kapt ("androidx.hilt:hilt-compiler:1.0.0")
-    implementation ("androidx.activity:activity-ktx:1.7.2")
+ //   implementation ("com.google.dagger:hilt-android:2.45")
+   // kapt ("com.google.dagger:hilt-android-compiler:2.45")
+   // kapt ("androidx.hilt:hilt-compiler:1.0.0")
+    implementation ("androidx.activity:activity-ktx:1.8.0")
 
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.14.2")
-    kapt ("com.github.bumptech.glide:compiler:4.12.0")
+    kapt ("com.github.bumptech.glide:compiler:4.13.2")
 }

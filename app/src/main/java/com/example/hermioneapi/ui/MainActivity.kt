@@ -7,16 +7,13 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.hermioneapi.R
 import com.example.hermioneapi.databinding.ActivityMainBinding
-import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 
-@AndroidEntryPoint
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val viewModel :MainViewModel by viewModels()
+    private val viewModel : MainViewModel by viewModels()
     private lateinit var adapter: CharacterAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
