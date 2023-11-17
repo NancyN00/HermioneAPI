@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hermioneapi.databinding.ActivityMainBinding
+import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -26,21 +29,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getCharacters() {
-        lifecycleScope.launchWhenStarted {
-            viewModel.state.collect{state ->
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.state.collect { state ->
 
-                if (state.isLoading){
-                    binding.progress.visibility = View.VISIBLE
-                }
+                    if (state.isLoading) {
+                        binding.progress.visibility = View.VISIBLE
+                    }
 
-                if(state.characters.isNotEmpty()){
-                    binding.progress.visibility = View.GONE
-                    adapter.setCharacterList(state.characters)
-                }
+                    if (state.characters.isNotEmpty()) {
+                        binding.progress.visibility = View.GONE
+                        adapter.setCharacterList(state.characters)
+                    }
 
-                if(state.message.isNotBlank()){
-                    binding.progress.visibility = View.GONE
-                    Toast.makeText(this@MainActivity, state.message, Toast.LENGTH_LONG).show()
+                    if (state.message.isNotBlank()) {
+                        binding.progress.visibility = View.GONE
+                        Toast.makeText(this@MainActivity, state.message, Toast.LENGTH_LONG).show()
+                    }
                 }
             }
         }
