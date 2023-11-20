@@ -69,7 +69,7 @@ dependencies {
  //   implementation ("com.google.dagger:hilt-android:2.45")
    // kapt ("com.google.dagger:hilt-android-compiler:2.45")
    // kapt ("androidx.hilt:hilt-compiler:1.0.0")
-    implementation ("androidx.activity:activity-ktx:1.8.0")
+    //implementation ("androidx.activity:activity-ktx:1.7.2")
 
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.14.2")
