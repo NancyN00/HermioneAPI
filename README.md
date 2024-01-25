@@ -1,6 +1,6 @@
 # Harry Potter
 
-> This is a list of Harry Potter's character names and house names.
+> This is a list of Harry Potter's character names, gender and their house names.
 
 ## Demo/screenshots
 <p align="center">
