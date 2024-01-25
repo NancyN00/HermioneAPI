@@ -12,19 +12,19 @@
 
 The app uses mvvm clean architecture. This includes;
 
-> repositories
-> views
-> viewModels
+- repositories 
+- views 
+- viewModels 
 
 ## Technologies
 
 The app uses these technologies;
 
-> Kotlin - App is built with the language.
-> XML - UI uses xml.
-> Retrofit- For networking.
-> Hilt - For dependency injection.
-> Glide - To display images from the API used.
-> Coroutines - Used to make asynchronous calls.
-> Flow - Used to get data from network requests asynchronously
+- Kotlin - App is built with the language. 
+- XML - UI uses xml. 
+- Retrofit- For networking. 
+- Hilt - For dependency injection. 
+- Glide - To display images from the API used. 
+- Coroutines - Used to make asynchronous calls. 
+- Flow - Used to get data from network requests asynchronously
 
