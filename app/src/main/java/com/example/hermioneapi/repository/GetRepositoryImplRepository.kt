@@ -7,12 +7,13 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import java.io.IOException
+import javax.inject.Inject
 
-class GetRepositoryImplRepository constructor(
+class GetRepositoryImplRepository @Inject constructor(
     private val api: HarryPotterApi
 ): GetCharactersRepository {
 
-    override suspend fun getCharacters(): Flow<Resource<List<Character>>> = flow {
+    override fun getCharacters(): Flow<Resource<List<Character>>> = flow {
 
         try {
             emit(Resource.Loading(data = null))
